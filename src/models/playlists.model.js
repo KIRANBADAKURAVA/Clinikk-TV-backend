@@ -10,9 +10,14 @@ const playlistSchema= mongoose.Schema({
         type: String,
         // required: true
     },
+    content:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref: 'Content'
+        }
+    ],
 
-   
-    createdBy:{
+    createdBy: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
         

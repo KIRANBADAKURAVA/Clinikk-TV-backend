@@ -1,13 +1,15 @@
 import mongoose from 'mongoose'
 
+import mongooseAggregatePaginate from 'mongoose-aggregate-paginate-v2'
+
 
 //Content Schema
 
 const contentSchema= new mongoose.Schema({
 
-        adminId: {
+        admin: {
            type: mongoose.Schema.Types.ObjectId,
-           ref: 'user'
+           ref: 'User'
         },
 
         title: {
@@ -15,7 +17,7 @@ const contentSchema= new mongoose.Schema({
             required: true
         },
 
-        contentfile:{
+        contentFile:{
             type : String,
             required: true
         },
@@ -37,8 +39,9 @@ const contentSchema= new mongoose.Schema({
             required:true
         },
         
-        mediaType:{
+        contentType:{
             type: String,
+            enum: ['Video', 'Audio'],
             required: true
         }
 
@@ -46,4 +49,4 @@ const contentSchema= new mongoose.Schema({
 
 contentSchema.plugin(mongooseAggregatePaginate)    // for using mongooseAggregatePaginate queries in videoschema
 
-export const Content= mongoose.model('Content',contentSchema) // in database "content"
+export const Content= mongoose.model('Content',contentSchema) // in database "contents"
