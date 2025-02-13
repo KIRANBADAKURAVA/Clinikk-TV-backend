@@ -17,6 +17,10 @@ Admin Authentication: Admins must register using an employee ID.
 
 Limited Access for Unsubscribed Users: Unsubscribed users have restricted access to premium content.
 
+Live streaming support for real-time events.
+
+Comment & Review System to engage users.
+
 ---
 ## 📂 Project Structure
 
