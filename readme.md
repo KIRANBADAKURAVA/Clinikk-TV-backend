@@ -5,11 +5,39 @@ This is the backend for Clinikk-TV, a content streaming platform. It provides us
 ## Features
 - User authentication (Registration, Login, Logout)
 - Password update and account management
-- Content upload and management with Cloudinary storage
+- Content upload and management with Cloudinary storage by Admin only
 - Watch history tracking
 - Subscription-based content access
-- Playlist creation and management
+- Playlist creation and management by User and Admin
 - Admin-specific functionalities
+
+---
+## 📂 Project Structure
+
+```
+Clinikk-TV-backend/
+│── node_modules/
+│── public/
+│── src/
+│   ├── controllers/       # Contains route controllers
+│   ├── db/                # Database connection files
+│   ├── middlewares/       # Authentication and other middlewares
+│   ├── models/            # Mongoose models for database schema
+│   ├── routes/            # Express routes for API endpoints
+│   ├── utils/             # Utility functions
+│   ├── app.js             # Express app setup
+│   ├── constants.js       # App-wide constants
+│   ├── index.js           # Entry point of the application
+│── .env.sample            # Sample environment variables file
+│── .gitignore             # Ignored files configuration
+│── package.json           # Dependencies and scripts
+```
+
+---
+
+## 🏗️ Database Model
+
+![alt text](image.png)
 
 ---
 
@@ -17,7 +45,7 @@ This is the backend for Clinikk-TV, a content streaming platform. It provides us
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-repo/Clinikk-TV-backend.git
+   git clone [https://github.com/your-repo/Clinikk-TV-backend.git](https://github.com/KIRANBADAKURAVA/Clinikk-TV-backend.git)
    cd Clinikk-TV-backend
    ```
 
@@ -32,7 +60,7 @@ This is the backend for Clinikk-TV, a content streaming platform. It provides us
 
 4. Start the server:
    ```sh
-   npm start
+   npm run dev
    ```
    The server will start on `http://localhost:9000`
 
@@ -43,6 +71,7 @@ This is the backend for Clinikk-TV, a content streaming platform. It provides us
 | Variable Name            | Description                                  |
 |--------------------------|----------------------------------------------|
 | `MONGO_URI`             | MongoDB connection string                   |
+| `FRONTEND_URL`          | To avoid CORS error                   |
 | `ACCESS_TOKEN_SECRET`   | Secret key for JWT access tokens             |
 | `REFRESH_TOKEN_SECRET`  | Secret key for JWT refresh tokens            |
 | `ACCESS_TOKEN_EXPIRY`   | Expiry time for access tokens                |
@@ -103,10 +132,7 @@ Content files are stored using [Cloudinary](https://cloudinary.com/). Ensure you
 
 ---
 
-## License
-This project is licensed under the MIT License.
 
----
 
 ## Contributing
 Feel free to submit issues and pull requests to improve this project!
