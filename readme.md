@@ -1,6 +1,6 @@
 # Clinikk-TV Backend
 
-This is the backend for Clinikk-TV, a content streaming platform. It provides user authentication, content management, playlist management, and subscription functionalities.
+This is the backend for Clinikk-TV, a content streaming platform providing access to rich, health-related media content, which can include both video and audio. It provides user authentication, content management, playlist management, and subscription functionalities.
 
 ## Features
 - User authentication (Registration, Login, Logout)
@@ -10,6 +10,12 @@ This is the backend for Clinikk-TV, a content streaming platform. It provides us
 - Subscription-based content access
 - Playlist creation and management by User and Admin
 - Admin-specific functionalities
+
+🚀 Additional Features
+
+Admin Authentication: Admins must register using an employee ID.
+
+Limited Access for Unsubscribed Users: Unsubscribed users have restricted access to premium content.
 
 ---
 ## 📂 Project Structure
