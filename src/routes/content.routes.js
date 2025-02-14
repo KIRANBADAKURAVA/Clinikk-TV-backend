@@ -22,7 +22,7 @@ ContentRouter.post('/uploadcontent', Tokenverification,  upload.fields([
 ContentRouter.get('/getallcontent',  getAllContent);
 
 // Route to get content by ID 
-ContentRouter.get('/content/:id',  getContentById);
+ContentRouter.get('/contentbyid/:id',  getContentById);
 
 // Route to delete content 
 ContentRouter.delete('/content/:id', Tokenverification, deleteContent);

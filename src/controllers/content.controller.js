@@ -73,7 +73,8 @@ const createContent = AsyncHandler(async (req, res) => {
  */
 const getAllContent = AsyncHandler(async (req, res) => {
     const contents = await Content.find().populate('admin', 'username email');
-
+    
+    
     if (!contents || contents.length === 0) {
         throw new ApiError(404, "No content found");
     }
