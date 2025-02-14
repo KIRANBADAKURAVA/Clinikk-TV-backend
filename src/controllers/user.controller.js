@@ -43,8 +43,8 @@ const AccessAndRefreshTokenGenerator = async (userId) => {
     const user = await User.findById(userId);
     if (!user) throw new ApiError(404, "User not found");
 
-    const accessToken = user.Generate_Accesstoken();
-    const refreshToken = user.Generate_Refreshtoken();
+    const accessToken = user.generateAccessToken();
+    const refreshToken = user.generateRefreshToken();
 
     user.refreshToken = refreshToken;
     await user.save({ validateBeforeSave: false });
@@ -55,7 +55,7 @@ const AccessAndRefreshTokenGenerator = async (userId) => {
 // User login
 const loginUser = AsyncHandler(async (req, res) => {
     const { username, email, password } = req.body;
-
+        console.log(req.body)
     if (!username && !email) {
         throw new ApiError(400, "Either username or email is required");
     }

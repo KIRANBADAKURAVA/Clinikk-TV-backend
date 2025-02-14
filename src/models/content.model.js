@@ -36,7 +36,7 @@ const contentSchema= new mongoose.Schema({
         published:{
             type:Boolean,
             default: true,
-            required:true
+           
         },
         
         contentType:{
