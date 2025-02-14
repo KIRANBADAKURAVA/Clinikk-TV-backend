@@ -36,7 +36,7 @@ import PlaylistRouter from './routes/playlist.routes.js'
 //routing 
 app.use('/api/v1/user', UserRouter)
 app.use('/api/v1/content', ContentRouter)
-app.use('/api/v1/play;;ist', PlaylistRouter)
+app.use('/api/v1/playlist', PlaylistRouter)
 
 
 
