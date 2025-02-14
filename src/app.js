@@ -6,7 +6,7 @@ const app = express()
 
 // cors 
 app.use(cors({
-    options: process.env.FRONTEND_URL,
+    option: process.env.FRONTEND_URL,
     credentials: true
 }))
 
